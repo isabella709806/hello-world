@@ -8,7 +8,9 @@ input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.Happy)
 })
 input.onGesture(Gesture.Shake, function () {
-    music.playSoundEffect(music.builtinSoundEffect(soundExpression.mysterious), SoundExpressionPlayMode.InBackground)
+    for (let index = 0; index < 4; index++) {
+        music.playSoundEffect(music.builtinSoundEffect(soundExpression.mysterious), SoundExpressionPlayMode.UntilDone)
+    }
 })
 basic.showIcon(IconNames.Sad)
 loops.everyInterval(500, function () {
